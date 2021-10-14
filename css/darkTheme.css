@@ -1,0 +1,42 @@
+body[data-theme = "darkTheme"]{
+  --cl-dark-0: #211e1d;
+  --cl-dark-1: #5a6166;
+
+  --cl-light-0: #d6e2e4;
+
+  --cl-yellow-0: #f8d929;
+
+  --cl-blue-1: #527191;
+
+  --accent: #d5553e;
+
+  background-color: var(--cl-dark-0);
+  color: var(--cl-light-0);
+}
+
+body[data-theme = "darkTheme"] .themeSwitch{
+  background-color: var(--cl-dark-1);
+}
+body[data-theme = "darkTheme"] .themeSwitch .moon svg{
+  fill: var(--cl-light-0);
+}
+body[data-theme = "darkTheme"] .themeSwitch .sun svg{
+  fill: var(--cl-dark-1);
+}
+body[data-theme = "darkTheme"] .themeSwitch .sun{
+  --trf: translateY(100%);
+
+  transform: var(--trf);
+  -o-transform: var(--trf);
+  -ms-transform: var(--trf);
+  -moz-transform: var(--trf);
+  -webkit-transform: var(--trf);
+}
+body[data-theme = "darkTheme"] .themeAction{
+  background-color: var(--cl-light-0);
+  color: var(--cl-dark-0);
+}
+body[data-theme = "darkTheme"] .landingCTA a{
+  color: var(--cl-dark-0);
+  background-color: var(--accent);
+}

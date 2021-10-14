@@ -1,0 +1,190 @@
+@import url('clearfix.css');
+@import url('darkTheme.css');
+@import url('lightTheme.css');
+@import url('coloredTheme.css');
+
+@media screen {
+  .themeSwitch{
+    --icon-size: 50px;
+    position: fixed;
+    z-index: 1000;
+    right: 0;
+    bottom: 0;
+    margin: 0 1.5rem 1.5rem 0;
+    width: var(--icon-size);
+    height: var(--icon-size);
+
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .themeSwitch .moon, .themeSwitch .sun{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 10%;
+    background-color: inherit;
+    border-radius: 50%;
+
+    transform-origin: center bottom;
+  }
+
+  section{
+    position: relative;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .sectionContent{
+    position: relative;
+    width: 90%;
+    height:fit-content;
+    max-width: 1920px;
+    min-height: 320px;
+
+    padding: 2rem 0;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .landingText h1{
+    font-family: var(--ft-arch);
+    font-size: 2rem;
+  }
+  .landingText .credit{
+    margin: -.75rem 0 0;
+    font-family: var(--ft-arch);
+    font-size: .9rem;
+    font-weight: 500;
+  }
+  .landingText .poem{
+    margin: 1rem 0 0;
+    text-align: left;
+
+    --trs: color .2s linear .1s;
+
+    transition: var(--trs);
+    -moz-transition: var(--trs);
+    -webkit-transition: var(--trs);
+    -o-transition: var(--trs);
+  }
+  .landingText .poem p{
+    line-height: 1.5rem;
+    margin: 0 0 1rem;
+    font-weight: 600;
+  }
+  .landingText .poem p:last-child{
+    margin: 0 0 0;
+  }
+  .themeAction{
+    display: inline-block;
+    padding: .1rem .5rem;
+    font-family: var(--ft-arch);
+
+    cursor: pointer;
+    border-radius: .5rem;
+
+    --trs: background-color .2s linear 0s;
+
+    transition: var(--trs);
+    -moz-transition: var(--trs);
+    -webkit-transition: var(--trs);
+    -o-transition: var(--trs);
+  }
+
+  .landingCarousel{
+    display: none;
+  }
+
+  .landingCTA{
+    margin: 2rem 0 0;
+  }
+
+  .landingCTA a{
+    display: block;
+    width: fit-content;
+    margin: 0 0;
+    padding: .5rem 1rem;
+    
+    font-weight: bold;
+    border-radius: .5rem;
+  }
+}
+
+
+@media screen and (min-width: 768px){
+  .themeSwitch{
+    --icon-size: 60px;
+  }
+
+  .landingContent{
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .landingText{
+    position: relative;
+    width: 50%;
+    margin: 0 1rem 0 0;
+  }
+  .landingCarousel{
+    position: relative;
+    width: 50%;
+    margin: 0 0 0 1rem;
+    display: block;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+  }
+
+  .landingCarousel .themeImage{
+    position: absolute;
+    display: block;
+    height: 90%;
+    align-self: flex-end;
+
+    opacity: 0;
+
+    --trf: translateY(15%) scale(.1);
+    transform: var(--trf);
+    -o-transform: var(--trf);
+    -ms-transform: var(--trf);
+    -moz-transform: var(--trf);
+    -webkit-transform: var(--trf);
+
+    --origin: center bottom;
+    transform-origin: var(--origin);
+    -o-transform-origin: var(--origin);
+    -ms-transform-origin: var(--origin);
+    -webkit-transform-origin: var(--origin);
+    -moz-transform-origin: var(--origin);
+  }
+  .landingCarousel .themeImage--active{
+    opacity: 1;
+
+    --trf: translate(0%) scale(1);
+    transform: var(--trf);
+    -o-transform: var(--trf);
+    -ms-transform: var(--trf);
+    -moz-transform: var(--trf);
+    -webkit-transform: var(--trf);
+  }
+
+  .landingCarousel .backdrop{
+    position: relative;
+    width: 100%;
+    visibility: hidden;
+  }
+
+
+  .landingCTA a{
+    margin: 0 auto;
+  }
+}

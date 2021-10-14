@@ -1,0 +1,8 @@
+1 build the page and a method to switch the themes
+2 build two simple themes (light and dark mode)
+  separate the themes into different css files.
+3 create the script to change between the themes
+4 add more elements to the html, keeping in mind how the themes,
+  will be applied.
+
+

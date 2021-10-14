@@ -1,0 +1,30 @@
+:root{
+  --ft-arch: 'Architects Daughter', cursive;
+  --ft-mont: 'Montserrat', sans-serif;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  --trs: all .3s linear 0s;
+
+  transition: var(--trs);
+  -moz-transition: var(--trs);
+  -webkit-transition: var(--trs);
+  -o-transition: var(--trs);
+}
+
+a,
+a:active,
+a:hover{
+  text-decoration: none;
+}
+img{
+  max-width: 90vw;
+}
+
+body{
+  font-family: var(--ft-mont);
+}

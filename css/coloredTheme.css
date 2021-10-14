@@ -1,0 +1,44 @@
+body[data-theme = "coloredTheme"]{
+  --cl-dark-0: #211e1d;
+  --cl-dark-1: #5a6166;
+
+  --cl-light-0: #d6e2e4;
+
+  --cl-orange-0: #F8A13F;
+
+  --cl-green-1: #0B7E4E;
+
+  --cl-purple-1: #A112AD;
+
+  --accent: #d5553e;
+
+  background-color: var(--cl-orange-0);
+  color: var(--cl-green-1);
+}
+
+body[data-theme = "coloredTheme"] .themeSwitch{
+  background-color: var(--cl-dark-1);
+}
+body[data-theme = "coloredTheme"] .themeSwitch .moon svg{
+  fill: var(--cl-light-0);
+}
+body[data-theme = "coloredTheme"] .themeSwitch .sun svg{
+  fill: var(--cl-dark-1);
+}
+body[data-theme = "coloredTheme"] .themeSwitch .sun{
+  --trf: translateY(100%);
+
+  transform: var(--trf);
+  -o-transform: var(--trf);
+  -ms-transform: var(--trf);
+  -moz-transform: var(--trf);
+  -webkit-transform: var(--trf);
+}
+body[data-theme = "coloredTheme"] .themeAction{
+  background-color: var(--cl-green-1);
+  color: var(--cl-orange-0);
+}
+body[data-theme = "coloredTheme"] .landingCTA a{
+  color: var(--cl-orange-0);
+  background-color: var(--cl-purple-1);
+}
